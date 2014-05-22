@@ -1,4 +1,4 @@
 cstudy
 ======
 
-study c program
+study c program and algorithm
