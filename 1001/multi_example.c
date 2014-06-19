@@ -39,26 +39,30 @@ int * multi (int a[], int b[]) {
     }
     int i, j;
     for (i = 0; i < lena; i++) {
-	for (j = 0; j < lenb; j++) {
+	    for (j = 0; j < lenb; j++) {
             c[i+j] += a[i] * b[j]; 
         }
     }
-    for (i = 0; i < total - 1; i++) {
-	c[i+1] += c[i] / 10;
+    for (i=0; i< 3; i++) {
+        printf("%d\n", c[i]); 
+    }
+    for (i = 0; i < total - 1 ; i++) {
+	    c[i+1] += c[i] / 10;
         c[i] = c[i] % 10;
+        printf("%d\n", c[i]);
     }
     int mid_num;
     if (c[total - 1] == 0 && c[total-2] == 0) {
-	d[0] = 0;
+	    d[0] = 0;
         free(c);
         return d;
     }
     if (c[total - 1] == 0) {
-	for (i = total - 2,j = 0; i >= 0; i--, j++) {
+        for (i = total - 2,j = 0; i >= 0; i--, j++) {
             d[j] = c[i];
         }
     } else {
-	for (i = total - 1,j = 0; i >= 0; i--, j++) {
+	    for (i = total - 1,j = 0; i >= 0; i--, j++) {
             d[j] = c[i];
         }
     }
@@ -67,8 +71,8 @@ int * multi (int a[], int b[]) {
 }
 
 void main () {
-   int a[] = {9,9,NULL};
-   int b[] = {0,NULL};
+   int a[] = {2,0,NULL};
+   int b[] = {1,NULL};
    int len_a = 0;
    int len_b = 0;
    while (a[len_a]) len_a++;
