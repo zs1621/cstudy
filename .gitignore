@@ -4,6 +4,7 @@
 *.obj
 *.elf
 *.swp
+*.debug
 
 # Libraries
 *.lib
