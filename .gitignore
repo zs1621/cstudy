@@ -5,7 +5,7 @@
 *.elf
 *.swp
 *.debug
-
+*.dSYW/ 
 # Libraries
 *.lib
 *.a
